@@ -42,7 +42,7 @@ abstract class Equatable {
   bool? get stringify => null;
 
  bool operator ==(Object other) => false;
-  }
+ 
 
   @override
   int get hashCode => runtimeType.hashCode ^ mapPropsToHashCode(props);
