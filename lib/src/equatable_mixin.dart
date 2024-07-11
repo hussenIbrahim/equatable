@@ -17,13 +17,7 @@ mixin EquatableMixin {
   // ignore: avoid_returning_null
   bool? get stringify => null;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        other is EquatableMixin &&
-            runtimeType == other.runtimeType &&
-            equals(props, other.props);
-  }
+ bool operator ==(Object other) => false;
 
   @override
   int get hashCode => runtimeType.hashCode ^ mapPropsToHashCode(props);
